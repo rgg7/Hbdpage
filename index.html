@@ -286,8 +286,20 @@
       <h1><p class="name">Anushka ✨❤"</p></h1><h1>
       </h1></div>
     <!-- 🎶 Background Music -->
- <audio autoplay loop hidden>
-    <source src="https://docs.google.com/uc?export=download&id=1SYrem9sZSjMd0urjY2wm2UDkID7r6GFn" type="audio/mpeg">
-  your browser does not support the audio element
- </audio>
+ <audio id="bg-music">
+  <source src="https://raw.githubusercontent.com/rgg7/Birthday-audio/main/Happy-birthday-song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<button onclick="playMusic()">🎵 Tap to play birthday song</button>
+
+<script>
+  function playMusic() {
+    const audio = document.getElementById("bg-music");
+    audio.loop = true;
+    audio.play().catch((e) => {
+      alert("Your browser blocked autoplay. Please tap again.");
+    });
+  }
+</script>
 </body></html>
